@@ -5,10 +5,10 @@ on:
       - main
 
 env:
-  DEV_ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+  DEV_ARM_SUBSCRIPTION_ID: ${{ secrets.DEV_ARM_SUBSCRIPTION_ID }}
   DEV_ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
-  DEV_ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
-  DEV_ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+  DEV_ARM_CLIENT_ID: ${{ secrets.DEV_ARM_CLIENT_ID }}
+  DEV_ARM_CLIENT_SECRET: ${{ secrets.DEV_ARM_CLIENT_SECRET }}
 
 jobs:
   dev-ci:
@@ -36,5 +36,5 @@ jobs:
           ingress: internal
           targetPort: 80
           imageToDeploy: mcr.microsoft.com/azuredocs/containerapps-helloworld:latest
-          environmentVariables: "ENV1=HI ENV2=WORLD \
-                                 ENV3=YO"
+          environmentVariables: ENV1=HI ENV2=WORLD \
+                                 ENV3=YO
