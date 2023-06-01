@@ -35,6 +35,8 @@ jobs:
           containerAppEnvironment: meishatestconappenv
           ingress: internal
           targetPort: 80
-          imageToDeploy: mcr.microsoft.com/hello-world:latest
+          acrUsername: ${{ secrets.ACR_USERNAME }}
+          acrPassword: ${{ secrets.ACR_PASSWORD }}
+          imageToDeploy: moodyscontainer.azurecr.io/albumapi:latest
           environmentVariables: ENV1=HI ENV2=WORLD \
                                  ENV3=YO
