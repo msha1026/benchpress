@@ -35,6 +35,6 @@ jobs:
           containerAppEnvironment: meishatestconappenv
           ingress: internal
           targetPort: 80
-          imageToDeploy: mcr.microsoft.com/azuredocs/containerapps-helloworld:latest
+          imageToDeploy: mcr.microsoft.com/hello-world:latest
           environmentVariables: ENV1=HI ENV2=WORLD \
                                  ENV3=YO
